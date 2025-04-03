@@ -45,7 +45,7 @@ app.post('/contact', async (req, res) => {
     }
 });
 
-const inquiryRoutes = require("../routes/inquiry"); // Ensure this matches your file name
+const inquiryRoutes = require("./routes/inquiry"); // Ensure this matches your file name
 app.use("/api/inquiries", inquiryRoutes);
 
 
