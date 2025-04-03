@@ -45,6 +45,10 @@ app.post('/contact', async (req, res) => {
     }
 });
 
+const inquiryRoutes = require("./routes/inquiry"); // Ensure this matches your file name
+app.use("/api/inquiries", inquiryRoutes);
+
+
 // ✅ Add a simple route for "/"
 app.get("/", (req, res) => {
     res.send("Welcome to the ORCAS API! 🌊🛢️");
