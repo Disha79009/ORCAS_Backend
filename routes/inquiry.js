@@ -12,4 +12,14 @@ router.post('/', async (req, res) => {
     }
 });
 
+// GET all inquiries
+router.get("/", async (req, res) => {
+  try {
+    const inquiries = await Inquiry.find(); // Fetch all inquiries from MongoDB
+    res.status(200).json(inquiries);
+  } catch (error) {
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
 module.exports = router;
